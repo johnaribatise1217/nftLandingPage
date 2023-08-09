@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: aliceblue;
+    font-weight: 400;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+ul li {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 2rem;
+    cursor: pointer;
+    position: relative;
+    font-family: sans-serif;
+}
+
+ul button{
+    display: none;
+}
+
+ul li::after{
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: rgb(88, 4, 84);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+ul li:hover::after{
+    transform: scaleX(1);
+}
+
+.logo > span {
+    font-size: 1.5rem;
+    color: rgb(168, 27, 187);
+    font-family: Tahoma;
+    font-weight: bold;
+}
+
+.signin button {
+    margin-right: 1rem;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgb(173, 8, 165);
+    color: inherit;
+    font-size: 15px;
+}
+
+.mobile {
+    display: none;
+}
+
+.mobile i {
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width : 769px) {
+    .mobile {
+        display: block;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: absolute;
+        top: 80px;
+        right: -350px;
+        width: 65%;
+        height: 60vh;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 30px 10px 0 10px;
+        transition: 0.4s ease-in-out;
+        margin-right: 30px;
+        backdrop-filter: blur(8.9px);
+        -webkit-backdrop-filter: blur(8.9px);
+        z-index: 2;
+    }
+
+    .links li {
+        font-size: 16px;
+    }
+
+    .links button {
+        display: block;
+        padding: 8px 20px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        background: rgb(173, 8, 165);
+        color: inherit;
+        font-size: 15px;
+        width: 80%;
+    }
+
+    .links.active {
+        right: 0px;
+    }
+
+    .signin {
+        display: none;
+    }
+
+}

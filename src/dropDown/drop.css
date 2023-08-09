@@ -1,0 +1,25 @@
+.wrapper {
+    width: min(100% - 2rem , 35rem);
+    margin-inline: auto;
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(241, 241, 241, 0.89);
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(157, 213, 240);
+}
+
+.search input {
+    outline: 0;
+    border: 0;
+    background: transparent;
+}

@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./NFTCOMPONENTS/Header/Header";
+import img from './Images/nft9.jpg'
+import Explore from "./Explore/Explore";
+import Discover from "./NFTCOMPONENTS/Discover/Discover";
+import image from './Images/NFT3.jpg'
+import newsImage from './Images/news1.jpg'
+import News from "./NFTCOMPONENTS/Newsletter/News";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header img={img}/>
+      <Explore/>
+      <Discover img={image}/>
+      <News img={newsImage}/>
     </div>
   );
 }
